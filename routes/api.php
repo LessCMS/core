@@ -25,8 +25,8 @@ Route::get('/', function () {
 Route::prefix('collection')->group(function() {
 	Route::get('/', 'CollectionController@index');
 	Route::get('/{collection_id?}', ['uses' => 'CollectionController@show']);
-	Route::get('/{collection_id?}/channel', ['uses' => 'CollectionController@channel']);
-	Route::get('/{collection_id}/channel/{channel_id}', ['uses' => 'CollectionController@channelId']);
+	// Route::get('/{collection_id?}/channel', ['uses' => 'CollectionController@channel']);
+	Route::get('/{collection_id}/channel/{channel_id?}', ['uses' => 'CollectionController@channel']);
 
 });
 

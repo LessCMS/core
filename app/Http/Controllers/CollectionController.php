@@ -54,15 +54,15 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function channel($collection_id)
-    {
-        return response()->json([
-            'route' => '/collection/'.$collection_id.'/channel/',
-            'id' => $collection_id
-        ]);
-    }
+    // public function channel($collection_id)
+    // {
+    //     return response()->json([
+    //         'route' => '/collection/'.$collection_id.'/channel/',
+    //         'id' => $collection_id
+    //     ]);
+    // }
 
-    public function channelId($collection_id, $channel_id)
+    public function channel($collection_id, $channel_id = null)
     {
         return response()->json([
             'route' => 'collection/'.$collection_id.'/channel/'.$channel_id.'/',
