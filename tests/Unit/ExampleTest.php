@@ -16,4 +16,13 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    /** @test */
+    function baseRoute()
+    {
+    	$response = $this->get('/api/');
+
+        $response->assertStatus(200);
+        
+    }
 }
